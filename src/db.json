@@ -1,0 +1,24 @@
+{
+    "projects": [
+        {
+            "id": 1,
+            "image": "https://t4.ftcdn.net/jpg/04/70/29/97/360_F_470299797_UD0eoVMMSUbHCcNJCdv2t8B2g1GVqYgs.jpg",
+            "name": "Project Name",
+            "designer": "Designer Name",
+            "pattern": "link to pattern",
+            "size": "1",
+            "craft": "knitting",
+            "tool": {
+                "craft": "knitting",
+                "size": "US 0"
+            },
+            "fiber": {
+                "image": "https://t4.ftcdn.net/jpg/04/70/29/97/360_F_470299797_UD0eoVMMSUbHCcNJCdv2t8B2g1GVqYgs.jpg",
+                "weight": "fingering",
+                "color": "natural",
+                "yards": "400",
+                "qty": "2"
+            }
+        }
+    ]
+}

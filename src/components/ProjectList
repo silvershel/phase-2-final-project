@@ -1,5 +1,17 @@
-function ProjectList() {
+import React from "react";
+import ProjectCard from "./ProjectCard";
 
+function ProjectList({ projects }) {
+
+    return (
+        <div>
+            {projects.map((project) => {
+                <ProjectCard 
+                name={projects.name} 
+                />
+            })}
+        </div>
+    )
 }
 
 export default ProjectList;

@@ -7,10 +7,13 @@ function App() {
     const [projects, setProjects] = useState([]);
 
     useEffect(() => {
-        fetch("http://localhost:3000/")
+
+        console.log('useEffect Fired')
+
+        fetch("http://localhost:8000/projects")
         .then((r) => r.json())
         .then((projects) => setProjects(projects))
-    });
+    }, []);
 
     return (
       <div className="app">

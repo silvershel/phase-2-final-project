@@ -5,9 +5,9 @@ function ProjectList({ projects }) {
 
     return (
         <div>
-            {projects.map((project) => {
-                <ProjectCard name={projects.name} />
-            })}
+            {projects.map((project) => 
+                <ProjectCard project={project} />
+            )}
         </div>
     )
 }

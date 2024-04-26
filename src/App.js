@@ -1,7 +1,8 @@
-import React, { useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 import Header from "./components/Header";
 import Search from "./components/Search";
 import ProjectList from "./components/ProjectList";
+import './App.css';
 
 function App() {
     const [projects, setProjects] = useState([]);
@@ -16,9 +17,9 @@ function App() {
     }, []);
 
     return (
-      <div className="app">
+      <div className="App">
           <Header />
-          <Search />
+          <Search projects={projects}/>
           <ProjectList projects={projects} />
       </div>
     );

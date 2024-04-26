@@ -1,5 +1,3 @@
-import React from "react";
-
 function NewProjectForm() {
     return (
         <div>

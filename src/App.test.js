@@ -4,7 +4,7 @@ import Header from './components/Header';
 
 test('should render the H1 element with the correct text', () => {
   // Arrange
-  const expectedText = 'Final Project';
+  const expectedText = 'Phase 2 App';
 
   // Act
   render(<Header />);

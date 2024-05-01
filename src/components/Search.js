@@ -5,7 +5,7 @@ function Search() {
             <p>Search Projects:</p>
             <form>
                 <input></input>
-                <button>Search</button>
+                <button type="submit">Search</button>
             </form>
         </div>
     );

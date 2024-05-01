@@ -1,7 +1,7 @@
 function NewProjectForm() {
     return (
         <div>
-            
+           <p>New Project</p>
         </div>
     )
 }

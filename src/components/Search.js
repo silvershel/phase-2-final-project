@@ -2,7 +2,11 @@ function Search() {
     
     return (
         <div>
-            <p>Search</p>
+            <p>Search Projects:</p>
+            <form>
+                <input></input>
+                <button>Search</button>
+            </form>
         </div>
     );
 }

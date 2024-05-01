@@ -4,7 +4,7 @@ function ProjectCard({ project }) {
 
     return (
         <div>
-            <h1>{name}</h1>
+            <h2>{name}</h2>
             <p>Designer: {designer}</p>
             <p>Pattern: {pattern}</p>
             <img alt="" src={image} />

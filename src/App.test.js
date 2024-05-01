@@ -1,6 +1,5 @@
 import React from 'react';
 import { render, screen } from '@testing-library/react';
-import App from './App';
 import Header from './components/Header';
 
 test('should render the H1 element with the correct text', () => {

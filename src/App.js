@@ -11,16 +11,16 @@ function App() {
 
         console.log('useEffect Fired')
 
-        fetch("http://localhost:8000/projects")
+        fetch(`http://localhost:8000/projects/?_limit=6`)
         .then((r) => r.json())
         .then((projects) => setProjects(projects))
     }, []);
 
     return (
-      <div className="App">
-          <Header />
-          <Search projects={projects}/>
-          <ProjectList projects={projects} />
+        <div className="App">
+            <Header />
+            <Search projects={projects}/>
+            <ProjectList projects={projects} />
       </div>
     );
 }

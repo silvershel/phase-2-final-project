@@ -10,6 +10,7 @@ function ProjectList({ projects }) {
                     project={project} 
                 />
             )}
+            <button>View More Projects</button>
         </div>
     )
 }

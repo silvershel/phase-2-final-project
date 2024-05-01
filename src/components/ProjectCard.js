@@ -1,6 +1,5 @@
 function ProjectCard({ project }) {
 
-    // Object Destructuring Assignment
     const { name, designer, pattern, image } = project;
 
     return (
@@ -8,7 +7,7 @@ function ProjectCard({ project }) {
             <h1>{name}</h1>
             <p>Designer: {designer}</p>
             <p>Pattern: {pattern}</p>
-            <img src={image} />
+            <img alt="" src={image} />
         </div>
     )
 

@@ -1,20 +1,28 @@
 function NewProjectForm() {
+
+    // if starting today, set status as "started on date"
+    // if not starting today set status as "not started"
+    // form autofills new project card data.
+    // sumbission takes you to the new project card page.
     return (
         <div>
            <p>New Project</p>
            <form>
                 <label>
-                    Text Input:
-                    <input type="text" value="One"/>
-                    Text Area:
-                    <textarea value="text area"/>
-                    Dropdown:
+                    Craft:
                     <select>
-                        <option value="1">1</option>
-                        <option value="2">2</option>
-                        <option value="3">3</option>
-                        <option value="4">4</option>
+                        <option value="knitting">Knitting</option>
+                        <option value="crochet">Crochet</option>
                     </select>
+                    Project Title:
+                    <input type="text" defaultValue="Project Title"/>
+                    Pattern:
+                    <input type="text" defaultValue="Pattern url here"/>
+                    Starting now?:
+                    <select>
+                        <option value="yes">Yes</option>
+                        <option value="no">No</option>
+                    </select>                    
                 </label> 
                                   
                 <button type="submit">Submit</button>
@@ -24,3 +32,8 @@ function NewProjectForm() {
 }
 
 export default NewProjectForm;
+
+// STRETCH GOALS
+    // if knitting, tools are needles
+    // if crochet, tools are hooks
+    // sumbission takes you to the new project card page (as a form to continue editing)

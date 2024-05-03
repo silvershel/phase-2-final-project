@@ -2,6 +2,8 @@ function ProjectCard({ project }) {
 
     const { name, designer, pattern, image } = project;
 
+    // add "finished" status option (or button?)
+
     return (
         <div>
             <h2>{name}</h2>
@@ -14,3 +16,9 @@ function ProjectCard({ project }) {
 }
 
 export default ProjectCard;
+
+// STRETCH GOALS
+    // edit button turns the page into a form
+    // button to go to project list
+    // hide incomplete fields
+    

@@ -6,10 +6,10 @@ import NewProjectForm from "../components/NewProjectForm";
 function NewProject() {
     return(
         <div className="App">
-            <Header />
             <header>
                 <NavBar />
             </header>
+            <Header />
             <NewProjectForm />
         </div>
     )

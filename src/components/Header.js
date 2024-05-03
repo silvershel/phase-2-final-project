@@ -1,7 +1,7 @@
 function Header() {
     return (
         <div>
-            <h1>Phase 2 App</h1>
+            <h1>Craft Track</h1>
         </div>
     )
 }

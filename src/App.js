@@ -1,12 +1,9 @@
 import './App.css';
-import Home from './pages/Home';
-import NewProject from './pages/NewProject';
 
 function App() {
     return(
         <div>
-            <Home />
-            <NewProject />
+            <h1>App</h1>
         </div>
     )
 }

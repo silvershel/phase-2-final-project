@@ -16,6 +16,12 @@ function NavBar() {
       >
         New Project
       </NavLink>
+      <NavLink
+        to="/about"
+        className="nav-link"
+      >
+        About
+      </NavLink>
     </nav>
   );
 };

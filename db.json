@@ -3,67 +3,33 @@
         {
             "id": 1,
             "image": "https://t4.ftcdn.net/jpg/04/70/29/97/360_F_470299797_UD0eoVMMSUbHCcNJCdv2t8B2g1GVqYgs.jpg",
-            "name": "Project One",
-            "designer": "Designer Name",
+            "name": "Sample Project One",
             "pattern": "link to pattern",
-            "size": "1",
             "craft": "knitting",
-            "tools": {
-                "craft": "knitting",
-                "size": "US 0"
-            },
-            "fiber": {
-                "image": "https://t4.ftcdn.net/jpg/04/70/29/97/360_F_470299797_UD0eoVMMSUbHCcNJCdv2t8B2g1GVqYgs.jpg",
-                "weight": "fingering",
-                "color": "natural",
-                "yards": "400",
-                "qty": "2"
-            },
-            "location": "on shelf",
             "status": "in progress"
         },
         {
             "id": 2,
             "image": "https://t4.ftcdn.net/jpg/04/70/29/97/360_F_470299797_UD0eoVMMSUbHCcNJCdv2t8B2g1GVqYgs.jpg",
-            "name": "Project Two",
-            "designer": "Designer Name",
+            "name": "Sample Project Two",
             "pattern": "link to pattern",
-            "size": "1",
             "craft": "knitting",
-            "tools": {
-                "craft": "knitting",
-                "size": "US 0"
-            },
-            "fiber": {
-                "image": "https://t4.ftcdn.net/jpg/04/70/29/97/360_F_470299797_UD0eoVMMSUbHCcNJCdv2t8B2g1GVqYgs.jpg",
-                "weight": "fingering",
-                "color": "natural",
-                "yards": "400",
-                "qty": "2"
-            },
-            "location": "on shelf",
             "status": "in progress"
         },
         {
             "id": 3,
             "image": "https://t4.ftcdn.net/jpg/04/70/29/97/360_F_470299797_UD0eoVMMSUbHCcNJCdv2t8B2g1GVqYgs.jpg",
-            "name": "Project Three",
-            "designer": "Designer Name",
+            "name": "Sample Project Three",
             "pattern": "link to pattern",
-            "size": "1",
             "craft": "knitting",
-            "tools": {
-                "craft": "knitting",
-                "size": "US 0"
-            },
-            "fiber": {
-                "image": "https://t4.ftcdn.net/jpg/04/70/29/97/360_F_470299797_UD0eoVMMSUbHCcNJCdv2t8B2g1GVqYgs.jpg",
-                "weight": "fingering",
-                "color": "natural",
-                "yards": "400",
-                "qty": "2"
-            },
-            "location": "on shelf",
+            "status": "in progress"
+        },
+        {
+            "id": 3,
+            "image": "https://t4.ftcdn.net/jpg/04/70/29/97/360_F_470299797_UD0eoVMMSUbHCcNJCdv2t8B2g1GVqYgs.jpg",
+            "name": "Sample Project Four",
+            "pattern": "link to pattern",
+            "craft": "knitting",
             "status": "in progress"
         }
     ]

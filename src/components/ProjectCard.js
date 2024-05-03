@@ -1,15 +1,16 @@
 function ProjectCard({ project }) {
 
-    const { name, designer, pattern, image } = project;
+    const { image, name, pattern, craft, status } = project;
 
     // add "finished" status option (or button?)
 
     return (
         <div>
-            <h2>{name}</h2>
-            <p>Designer: {designer}</p>
-            <p>Pattern: {pattern}</p>
             <img alt="" src={image} />
+            <h2>{name}</h2>
+            <p>Pattern: {pattern}</p>
+            <p>Craft: {craft}</p>
+            <p>Status: {status}</p>
         </div>
     )
 

@@ -1,5 +1,6 @@
 function NewProjectForm() {
 
+
     // if starting today, set status as "started on date"
     // if not starting today set status as "not started"
     // form autofills new project card data.
@@ -25,7 +26,7 @@ function NewProjectForm() {
                     </select>                    
                 </label> 
                                   
-                <button type="submit">Submit</button>
+                <button type="submit">Submit</button >
            </form>
         </div>
     )

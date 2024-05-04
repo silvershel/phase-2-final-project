@@ -20,20 +20,25 @@ function App() {
     }, []);
 
     // POST request from NewProjectForm component.
-    function onAddProject(newProject) {
+    function handleAddProject(newProject) {
         setProjects([...projects, newProject])
         setFilteredProjects([...projects, newProject])
     }
 
     // DELETE request to delete a ProjectCare.
-    function onDelete(deletedProject) {
+    function handleDelete(deletedProject) {
         let updatedProjects = projects.filter((project) => project !== deletedProject)
         setProjects(updatedProjects);
         setFilteredProjects(updatedProjects);
     }
 
+    // Edit button click
+    function handleEditClick() {
+
+    }
+
     // Filter function for Search component.
-    function onSearch(searchValue) {
+    function handleSearch(searchValue) {
         let searchedProjects =  projects.filter((project) => {
             return project.name.toLowerCase().includes(searchValue.toLowerCase());
         })
@@ -46,7 +51,7 @@ function App() {
             <header>
                 <NavBar />
             </header>
-            <Outlet context={{ filteredProjects, onSearch, onAddProject, onDelete }} />
+            <Outlet context={{ filteredProjects, handleSearch, handleAddProject, handleDelete }} />
         </div>
     )
 }

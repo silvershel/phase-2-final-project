@@ -3,12 +3,12 @@ import ProjectList from "./ProjectList";
 import Search from "./Search";
 
 function ProjectPage() {
-    const { filteredProjects, onSearch, onDelete } = useOutletContext();
+    const { filteredProjects, handleSearch, handleDelete } = useOutletContext();
     
     return(
         <div className="App">
-            <Search onSearch={onSearch} />
-            <ProjectList projects={filteredProjects} onDelete={onDelete} />
+            <Search handleSearch={handleSearch} />
+            <ProjectList projects={filteredProjects} handleDelete={handleDelete} />
         </div>
     )
 }

@@ -6,9 +6,9 @@ function NewProjectForm() {
     const [name, setName] = useState("");
     const [pattern, setPattern] = useState("");
     const [status, setStatus] = useState("started");
-    const {onAddProject} = useOutletContext();
+    const {handleAddProject} = useOutletContext();
 
-    function handleAddProject(e) {
+    function handleAddProjectClick(e) {
         e.preventDefault();
         const newProject = {
             image: "https://t4.ftcdn.net/jpg/04/70/29/97/360_F_470299797_UD0eoVMMSUbHCcNJCdv2t8B2g1GVqYgs.jpg",
@@ -25,14 +25,14 @@ function NewProjectForm() {
             body: JSON.stringify(newProject),
         })
         .then((r) => r.json())
-        .then((newProject) => onAddProject(newProject))
+        .then((newProject) => handleAddProject(newProject))
     };
 
     return (
         <div>
            <h2>Create A New Project</h2>
            <p>Use this form to submit a new project.</p>
-           <form onSubmit={handleAddProject}>
+           <form onSubmit={handleAddProjectClick}>
                 <label>
                     Craft:
                     <select onChange={(e) => setCraft(e.target.value)}>

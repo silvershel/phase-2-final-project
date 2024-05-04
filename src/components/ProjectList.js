@@ -1,6 +1,6 @@
 import ProjectCard from "./ProjectCard";
 
-function ProjectList({ projects, onDelete }) {
+function ProjectList({ projects, handleDelete }) {
     
     return (
         <div>
@@ -9,7 +9,7 @@ function ProjectList({ projects, onDelete }) {
                     key={project.id}
                     id={project.id}
                     project={project}
-                    onDelete={onDelete}
+                    handleDelete={handleDelete}
                 />
             )}
             <button>View More Projects</button>

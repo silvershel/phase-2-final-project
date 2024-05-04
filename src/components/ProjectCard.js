@@ -1,4 +1,4 @@
-function ProjectCard({ project, onDelete }) {
+function ProjectCard({ project, handleDelete }) {
     const { id, image, name, pattern, craft, status } = project;
 
     function handleEditClick() {
@@ -10,7 +10,7 @@ function ProjectCard({ project, onDelete }) {
             method: "DELETE"
         })
         .then((r) => r.json())
-        .then(() => onDelete(project))
+        .then(() => handleDelete(project))
     }
 
     // add "finished" status option (button?)

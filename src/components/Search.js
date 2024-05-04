@@ -1,9 +1,9 @@
-function Search({ onSearch }) {
+function Search({ handleSearch }) {
 
     return (
         <div>
             <p>Search Projects:</p>
-            <input onChange={(e) => onSearch(e.target.value)} />
+            <input onChange={(e) => handleSearch(e.target.value)} />
         </div>
     );
 }

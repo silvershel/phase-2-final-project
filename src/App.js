@@ -1,8 +1,8 @@
 import { useState, useEffect } from "react";
 import './App.css';
-import Home from "./pages/Home";
-import NewProject from "./pages/NewProject";
-import About from "./pages/About";
+import Header from "./components/Header";
+import NavBar from "./components/NavBar";
+import { Outlet } from "react-router-dom";
 
 function App() {
     const [projects, setProjects] = useState([]);
@@ -26,8 +26,12 @@ function App() {
     }
     
     return(
-        <div>
-            <Home projects={filteredProjects} onSearch={handleSearch} />
+        <div className="App">
+            <Header />
+            <header>
+                <NavBar />
+            </header>
+            <Outlet context={projects}/>
         </div>
     )
 }
@@ -36,3 +40,4 @@ export default App;
 
 // STRETCH GOALS
     // Display projects by most recently worked on
+    // Sort projects by (...)

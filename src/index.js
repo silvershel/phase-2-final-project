@@ -1,25 +1,31 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import { createBrowserRouter, RouterProvider } from "react-router-dom";
-import './index.css';
-import Home from './pages/Home';
-import NewProject from "./pages/NewProject"
-import About from "./pages/About"
 import reportWebVitals from './reportWebVitals';
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import App from './App';
+import ProjectPage from './components/ProjectPage';
+import NewProjectForm from './components/NewProjectForm';
+import About from "./components/About"
+import './index.css';
 
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <App />
-  },
-  {
-    path: "/new-project",
-    element: <NewProject />
-  },
-  {
-    path: "/about",
-    element: <About />
+    element: <App />,
+    children: [
+      {
+        path: "/",
+        element: <ProjectPage />
+      },
+      {
+        path: "/new-project",
+        element: <NewProjectForm />
+      },
+      {
+        path: "/about",
+        element: <About />
+      }
+    ]
   }
 ]);
 
@@ -30,3 +36,7 @@ root.render(<RouterProvider router={router} />);
 // to log results (for example: reportWebVitals(console.log))
 // or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
 reportWebVitals();
+
+//STRETCH GOALS
+  // Add error page
+  

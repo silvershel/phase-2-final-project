@@ -1,6 +1,10 @@
+import { useOutletContext } from "react-router-dom";
 import ProjectCard from "./ProjectCard";
 
-function ProjectList({ projects }) {
+function ProjectList() {
+    const projects = useOutletContext();
+    
+
 
     return (
         <div>

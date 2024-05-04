@@ -1,17 +1,16 @@
-import { Outlet, useOutletContext } from "react-router-dom";
+import { useOutletContext } from "react-router-dom";
 import ProjectList from "./ProjectList";
 import Search from "./Search";
 
-function Home() {
-    const projects = useOutletContext();
+function ProjectPage() {
+    const { filteredProjects, onSearch, onDelete } = useOutletContext();
     
     return(
         <div className="App">
-            <Search />
-            <ProjectList />
-            <Outlet projects={projects} />
+            <Search onSearch={onSearch} />
+            <ProjectList projects={filteredProjects} onDelete={onDelete} />
         </div>
     )
 }
 
-export default Home;
+export default ProjectPage;

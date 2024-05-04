@@ -1,18 +1,17 @@
 import { useState } from "react";
+import { useOutletContext } from "react-router-dom";
 
-function NewProjectForm({ onAddProject }) {
-const [craft, setCraft] = useState("knitting");
-const [name, setName] = useState("");
-const [pattern, setPattern] = useState("");
-const [status, setStatus] = useState("started");
+function NewProjectForm() {
+    const [craft, setCraft] = useState("knitting");
+    const [name, setName] = useState("");
+    const [pattern, setPattern] = useState("");
+    const [status, setStatus] = useState("started");
+    const {onAddProject} = useOutletContext();
 
-    // if starting today, set status as "started on date"
-    // if not starting today set status as "not started"
-    // form autofills new project card data.
-    // sumbission takes you to the new project card page.
     function handleAddProject(e) {
         e.preventDefault();
         const newProject = {
+            image: "https://t4.ftcdn.net/jpg/04/70/29/97/360_F_470299797_UD0eoVMMSUbHCcNJCdv2t8B2g1GVqYgs.jpg",
             craft: craft,
             name: name,
             pattern: pattern,
@@ -26,9 +25,8 @@ const [status, setStatus] = useState("started");
             body: JSON.stringify(newProject),
         })
         .then((r) => r.json())
-        .then((newProjectData) => onAddProject(newProjectData))
-
-    }
+        .then((newProject) => onAddProject(newProject))
+    };
 
     return (
         <div>
@@ -47,7 +45,7 @@ const [status, setStatus] = useState("started");
                     <input type="text" placeholder="Pattern url here" onChange={(e) => setPattern(e.target.value)} />
                     Starting now?:
                     <select onChange={(e) => setStatus(e.target.value)}>
-                        <option value="started">Yes</option>
+                        <option value="in progress">Yes</option>
                         <option value="not started">No</option>
                     </select>                    
                 </label> 
@@ -61,6 +59,9 @@ const [status, setStatus] = useState("started");
 export default NewProjectForm;
 
 // STRETCH GOALS
+    // sumbission takes you to the main page or new project card page (to edit).
+    // if starting today, set status as "started on date"
+    // if not starting today set status as "not started"
     // if knitting, tools are needles
     // if crochet, tools are hooks
     // sumbission takes you to the new project card page (as a form to continue editing)

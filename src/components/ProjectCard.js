@@ -1,12 +1,16 @@
-function ProjectCard({ project }) {
-    const { image, name, pattern, craft, status } = project;
+function ProjectCard({ project, onDelete }) {
+    const { id, image, name, pattern, craft, status } = project;
 
     function handleEditClick() {
         console.log("edit clicked")
     }
 
     function handleDeleteClick() {
-        console.log("delete clicked")
+        fetch(`http://localhost:8000/projects/${id}`, {
+            method: "DELETE"
+        })
+        .then((r) => r.json())
+        .then(() => onDelete(project))
     }
 
     // add "finished" status option (button?)

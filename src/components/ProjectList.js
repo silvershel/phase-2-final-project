@@ -1,17 +1,15 @@
-import { useOutletContext } from "react-router-dom";
 import ProjectCard from "./ProjectCard";
 
-function ProjectList() {
-    const projects = useOutletContext();
+function ProjectList({ projects, onDelete }) {
     
-
-
     return (
         <div>
             {projects.map((project) => 
                 <ProjectCard 
                     key={project.id}
+                    id={project.id}
                     project={project}
+                    onDelete={onDelete}
                 />
             )}
             <button>View More Projects</button>

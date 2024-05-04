@@ -7,7 +7,7 @@ function NavBar() {
         to="/"
         className="nav-link"
       >
-        Home
+        Projects
       </NavLink>
       <NavLink
         to="/new-project"

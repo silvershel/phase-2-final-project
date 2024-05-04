@@ -1,36 +1,36 @@
 {
-    "projects": [
-        {
-            "id": 1,
-            "image": "https://t4.ftcdn.net/jpg/04/70/29/97/360_F_470299797_UD0eoVMMSUbHCcNJCdv2t8B2g1GVqYgs.jpg",
-            "name": "Sample Project One",
-            "pattern": "link to pattern",
-            "craft": "knitting",
-            "status": "in progress"
-        },
-        {
-            "id": 2,
-            "image": "https://t4.ftcdn.net/jpg/04/70/29/97/360_F_470299797_UD0eoVMMSUbHCcNJCdv2t8B2g1GVqYgs.jpg",
-            "name": "Sample Project Two",
-            "pattern": "link to pattern",
-            "craft": "knitting",
-            "status": "in progress"
-        },
-        {
-            "id": 3,
-            "image": "https://t4.ftcdn.net/jpg/04/70/29/97/360_F_470299797_UD0eoVMMSUbHCcNJCdv2t8B2g1GVqYgs.jpg",
-            "name": "Sample Project Three",
-            "pattern": "link to pattern",
-            "craft": "knitting",
-            "status": "in progress"
-        },
-        {
-            "id": 4,
-            "image": "https://t4.ftcdn.net/jpg/04/70/29/97/360_F_470299797_UD0eoVMMSUbHCcNJCdv2t8B2g1GVqYgs.jpg",
-            "name": "Sample Project Four",
-            "pattern": "link to pattern",
-            "craft": "knitting",
-            "status": "in progress"
-        }
-    ]
+  "projects": [
+    {
+      "id": 1,
+      "image": "https://t4.ftcdn.net/jpg/04/70/29/97/360_F_470299797_UD0eoVMMSUbHCcNJCdv2t8B2g1GVqYgs.jpg",
+      "name": "Sample Project One",
+      "pattern": "link to pattern",
+      "craft": "knitting",
+      "status": "in progress"
+    },
+    {
+      "id": 2,
+      "image": "https://t4.ftcdn.net/jpg/04/70/29/97/360_F_470299797_UD0eoVMMSUbHCcNJCdv2t8B2g1GVqYgs.jpg",
+      "name": "Sample Project Two",
+      "pattern": "link to pattern",
+      "craft": "knitting",
+      "status": "in progress"
+    },
+    {
+      "id": 3,
+      "image": "https://t4.ftcdn.net/jpg/04/70/29/97/360_F_470299797_UD0eoVMMSUbHCcNJCdv2t8B2g1GVqYgs.jpg",
+      "name": "Sample Project Three",
+      "pattern": "link to pattern",
+      "craft": "knitting",
+      "status": "in progress"
+    },
+    {
+      "id": "8168",
+      "image": "https://t4.ftcdn.net/jpg/04/70/29/97/360_F_470299797_UD0eoVMMSUbHCcNJCdv2t8B2g1GVqYgs.jpg",
+      "craft": "knitting",
+      "name": "Sample Project Four",
+      "pattern": "Pattern URL",
+      "status": "in progress"
+    }
+  ]
 }

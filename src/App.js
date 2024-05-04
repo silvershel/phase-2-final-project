@@ -1,15 +1,16 @@
 import { useState, useEffect } from "react";
-import './index.css';
+import { Outlet } from "react-router-dom";
 import Header from "./components/Header";
 import NavBar from "./components/NavBar";
-import { Outlet } from "react-router-dom";
+import './index.css';
 
 function App() {
     const [projects, setProjects] = useState([]);
     const [filteredProjects, setFilteredProjects] = useState([]);
 
+    // FETCH request to display all projects.
     useEffect(() => {
-        fetch(`http://localhost:8000/projects/?_limit=6`) 
+        fetch(`http://localhost:8000/projects`) 
         // "?_limit=6" is used to load a maximum of 6 projects on the page.
         .then((r) => r.json())
         .then((projectData) => {
@@ -18,7 +19,21 @@ function App() {
         })
     }, []);
 
-    function handleSearch(searchValue) {
+    // POST request from NewProjectForm component.
+    function onAddProject(newProject) {
+        setProjects([...projects, newProject])
+        setFilteredProjects([...projects, newProject])
+    }
+
+    // DELETE request to delete a ProjectCare.
+    function onDelete(deletedProject) {
+        let updatedProjects = projects.filter((project) => project !== deletedProject)
+        setProjects(updatedProjects);
+        setFilteredProjects(updatedProjects);
+    }
+
+    // Filter function for Search component.
+    function onSearch(searchValue) {
         let searchedProjects =  projects.filter((project) => {
             return project.name.toLowerCase().includes(searchValue.toLowerCase());
         })
@@ -31,7 +46,7 @@ function App() {
             <header>
                 <NavBar />
             </header>
-            <Outlet context={projects}/>
+            <Outlet context={{ filteredProjects, onSearch, onAddProject, onDelete }} />
         </div>
     )
 }

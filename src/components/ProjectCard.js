@@ -1,6 +1,13 @@
 function ProjectCard({ project }) {
-
     const { image, name, pattern, craft, status } = project;
+
+    function handleEditClick() {
+        console.log("edit clicked")
+    }
+
+    function handleDeleteClick() {
+        console.log("delete clicked")
+    }
 
     // add "finished" status option (button?)
 
@@ -11,8 +18,8 @@ function ProjectCard({ project }) {
             <p>Pattern: {pattern}</p>
             <p>Craft: {craft}</p>
             <p>Status: {status}</p>
-            <button>Edit</button>
-            <button>Delete</button>
+            <button onClick={handleEditClick}>Edit</button>
+            <button onClick={handleDeleteClick}>Delete</button>
         </div>
     )
 

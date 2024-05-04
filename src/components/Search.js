@@ -1,12 +1,9 @@
-function Search() {
-    
+function Search({ onSearch }) {
+
     return (
         <div>
             <p>Search Projects:</p>
-            <form onChange={() => console.log("New Search Change")}>
-                <input></input>
-                <button type="submit">Search</button>
-            </form>
+            <input onChange={(e) => onSearch(e.target.value)} />
         </div>
     );
 }

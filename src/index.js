@@ -6,11 +6,12 @@ import Home from './pages/Home';
 import NewProject from "./pages/NewProject"
 import About from "./pages/About"
 import reportWebVitals from './reportWebVitals';
+import App from './App';
 
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <Home />
+    element: <App />
   },
   {
     path: "/new-project",

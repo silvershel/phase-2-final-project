@@ -1,14 +1,16 @@
+import { useState, useEffect } from "react";
 import Header from "../components/Header";
 import ProjectList from "../components/ProjectList";
-import "../App.css"
 import Search from "../components/Search";
+import "../App.css"
 
-function Home() {
+function Home({ projects, onSearch, onAddProject }) {
+
     return(
         <div className="App">
             <Header />
-            <Search />
-            <ProjectList />
+            <Search onSearch={onSearch} />
+            <ProjectList projects={projects} />
         </div>
     )
 }

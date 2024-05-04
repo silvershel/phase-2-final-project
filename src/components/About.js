@@ -1,6 +1,3 @@
-import "../App.css"
-
-
 function About() {
     return (
         <div className="App">

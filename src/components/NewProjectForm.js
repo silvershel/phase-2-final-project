@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { useOutletContext } from "react-router-dom";
+import { useOutletContext, useNavigate } from "react-router-dom";
 
 function NewProjectForm() {
     const [craft, setCraft] = useState("knitting");
@@ -7,6 +7,7 @@ function NewProjectForm() {
     const [pattern, setPattern] = useState("");
     const [status, setStatus] = useState("started");
     const {handleAddProject} = useOutletContext();
+    const navigate = useNavigate();
 
     function handleAddProjectClick(e) {
         e.preventDefault();
@@ -26,6 +27,7 @@ function NewProjectForm() {
         })
         .then((r) => r.json())
         .then((newProject) => handleAddProject(newProject))
+        navigate('/');
     };
 
     return (

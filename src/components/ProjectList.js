@@ -4,15 +4,23 @@ function ProjectList({ projects, handleDelete }) {
     
     return (
         <div>
-            {projects.map((project) => 
-                <ProjectCard 
-                    key={project.id}
-                    id={project.id}
-                    project={project}
-                    handleDelete={handleDelete}
-                />
-            )}
-            <button>View More Projects</button>
+            <div className="container">
+                {projects.map((project) => 
+                    <ProjectCard 
+                        key={project.id}
+                        id={project.id}
+                        image={project.image}
+                        name={project.name}
+                        pattern={project.pattern}
+                        craft={project.craft}
+                        status={project.status}
+                        handleDelete={handleDelete}
+                    />
+                )}
+            </div>
+            <div>
+                <button className="button">View More Projects</button>
+            </div>
         </div>
     )
 }

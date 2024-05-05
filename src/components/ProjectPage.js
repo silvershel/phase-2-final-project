@@ -6,7 +6,7 @@ function ProjectPage() {
     const { filteredProjects, handleSearch, handleDelete } = useOutletContext();
     
     return(
-        <div className="App">
+        <div>
             <Search handleSearch={handleSearch} />
             <ProjectList projects={filteredProjects} handleDelete={handleDelete} />
         </div>

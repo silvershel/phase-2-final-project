@@ -1,8 +1,10 @@
-function ProjectCard({ project, handleDelete }) {
-    const { id, image, name, pattern, craft, status } = project;
+import { useNavigate } from "react-router-dom";
+
+function ProjectCard({ project, handleDelete, id, image, name, pattern, craft, status }) {
+    const navigate = useNavigate();
 
     function handleEditClick() {
-        console.log("edit clicked")
+        navigate(`/project/${id}`);
     }
 
     function handleDeleteClick() {
@@ -16,14 +18,18 @@ function ProjectCard({ project, handleDelete }) {
     // add "finished" status option (button?)
 
     return (
-        <div>
+        <div className="card" >
             <img alt="" src={image} />
-            <h2>{name}</h2>
-            <p>Pattern: {pattern}</p>
-            <p>Craft: {craft}</p>
-            <p>Status: {status}</p>
-            <button onClick={handleEditClick}>Edit</button>
-            <button onClick={handleDeleteClick}>Delete</button>
+            <div className="info">
+                <h2>{name}</h2>
+                <a href={pattern} >Pattern</a>
+                <li>Craft: {craft}</li>
+                <li>Status: {status}</li>
+            </div>
+            <div>
+                <button className="edit" onClick={handleEditClick}>Edit</button>
+                <button className="delete" onClick={handleDeleteClick}>Delete</button>
+            </div>
         </div>
     )
 

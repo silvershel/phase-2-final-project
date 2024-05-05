@@ -31,7 +31,7 @@ function NewProjectForm() {
     };
 
     return (
-        <div>
+        <div >
            <h2>Create A New Project</h2>
            <p>Use this form to submit a new project.</p>
            <form onSubmit={handleAddProjectClick}>
@@ -42,9 +42,9 @@ function NewProjectForm() {
                         <option value="crochet">Crochet</option>
                     </select>
                     Project Name:
-                    <input type="text" placeholder="Project Title" onChange={(e) => setName(e.target.value)}/>
+                    <input placeholder="Project Title" onChange={(e) => setName(e.target.value)}/>
                     Pattern:
-                    <input type="text" placeholder="Pattern url here" onChange={(e) => setPattern(e.target.value)} />
+                    <input placeholder="Pattern url here" onChange={(e) => setPattern(e.target.value)} />
                     Starting now?:
                     <select onChange={(e) => setStatus(e.target.value)}>
                         <option value="in progress">Yes</option>
@@ -52,7 +52,7 @@ function NewProjectForm() {
                     </select>                    
                 </label> 
                                   
-                <button type="submit">Submit</button >
+                <button>Submit</button >
            </form>
         </div>
     )

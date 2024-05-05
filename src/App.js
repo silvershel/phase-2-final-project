@@ -33,7 +33,7 @@ function App() {
     }
 
     // Edit button click
-    function handleEditClick() {
+    function handleEdit() {
 
     }
 

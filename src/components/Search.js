@@ -3,7 +3,7 @@ function Search({ handleSearch }) {
     return (
         <div>
             <p>Search Projects:</p>
-            <input onChange={(e) => handleSearch(e.target.value)} />
+            <input placeholder="Search" onChange={(e) => handleSearch(e.target.value)} />
         </div>
     );
 }

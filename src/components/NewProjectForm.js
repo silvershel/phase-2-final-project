@@ -36,23 +36,22 @@ function NewProjectForm() {
            <p>Use this form to submit a new project.</p>
            <form onSubmit={handleAddProjectClick}>
                 <label>
+                    Project Name:
+                    <input placeholder="Project Title" onChange={(e) => setName(e.target.value)}/>
+                    Pattern:
+                    <input placeholder="Pattern url here" onChange={(e) => setPattern(e.target.value)} />
                     Craft:
                     <select onChange={(e) => setCraft(e.target.value)}>
                         <option value="knitting">Knitting</option>
                         <option value="crochet">Crochet</option>
                     </select>
-                    Project Name:
-                    <input placeholder="Project Title" onChange={(e) => setName(e.target.value)}/>
-                    Pattern:
-                    <input placeholder="Pattern url here" onChange={(e) => setPattern(e.target.value)} />
                     Starting now?:
                     <select onChange={(e) => setStatus(e.target.value)}>
                         <option value="in progress">Yes</option>
                         <option value="not started">No</option>
                     </select>                    
-                </label> 
-                                  
-                <button>Submit</button >
+                </label>            
+                <button className="submit" >Submit</button >
            </form>
         </div>
     )

@@ -2,6 +2,7 @@ import App from './App';
 import ProjectPage from './components/ProjectPage';
 import NewProjectForm from './components/NewProjectForm';
 import About from "./components/About"
+import ProjectCard from './components/ProjectCard';
 
 const routes = [
   {
@@ -20,6 +21,10 @@ const routes = [
         path: "/about",
         element: <About />
       },
+      {
+        path: "/project/:id",
+        element: <ProjectCard />
+      }
     ]
   }
 ];

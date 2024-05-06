@@ -6,13 +6,14 @@ function NewProjectForm() {
     const [name, setName] = useState("");
     const [pattern, setPattern] = useState("");
     const [status, setStatus] = useState("in progress");
+    const [image, setImage] = useState("")
     const {handleAddProject} = useOutletContext();
     const navigate = useNavigate();
 
     function handleAddProjectClick(e) {
         e.preventDefault();
         const newProject = {
-            image: "https://t4.ftcdn.net/jpg/04/70/29/97/360_F_470299797_UD0eoVMMSUbHCcNJCdv2t8B2g1GVqYgs.jpg",
+            image: image,
             craft: craft,
             name: name,
             pattern: pattern,
@@ -37,9 +38,9 @@ function NewProjectForm() {
            <form onSubmit={handleAddProjectClick}>
                 <label>
                     Project Name:
-                    <input placeholder="Project Title" value={name} onChange={(e) => setName(e.target.value)}/>
+                    <input type="text" placeholder="Project Title" value={name} onChange={(e) => setName(e.target.value)}/>
                     Pattern:
-                    <input placeholder="Pattern url here" value={pattern} onChange={(e) => setPattern(e.target.value)} />
+                    <input type="text" placeholder="Pattern url here" value={pattern} onChange={(e) => setPattern(e.target.value)} />
                     Craft:
                     <select value={craft} onChange={(e) => setCraft(e.target.value)}>
                         <option value="knitting">Knitting</option>
@@ -49,7 +50,9 @@ function NewProjectForm() {
                     <select value={status} onChange={(e) => setStatus(e.target.value)}>
                         <option value="in progress">Yes</option>
                         <option value="not started">No</option>
-                    </select>                    
+                    </select> 
+                    Upload An Image:
+                    <input type="text" placeholder="Project Image" value={image} src={image} onChange={(e) => setImage(e.target.value)}/>                   
                 </label>            
                 <button className="submit" >Submit</button >
            </form>

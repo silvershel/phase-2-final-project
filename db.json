@@ -39,6 +39,14 @@
       "name": "Sample Project 5",
       "pattern": "url",
       "status": "in progress"
+    },
+    {
+      "id": "db04",
+      "image": "https://media.gq.com/photos/65d907d619c840b1c3f654a6/16:9/w_2240,c_limit/sweaters.jpg",
+      "craft": "knitting",
+      "name": "",
+      "pattern": "",
+      "status": "in progress"
     }
   ]
 }

@@ -1,6 +1,6 @@
 import ProjectCard from "./ProjectCard";
 
-function ProjectList({ projects, handleDelete }) {
+function ProjectList({ projects, handleDelete, handleEdit }) {
     
     return (
         <div>
@@ -15,6 +15,7 @@ function ProjectList({ projects, handleDelete }) {
                         craft={project.craft}
                         status={project.status}
                         handleDelete={handleDelete}
+                        handleEdit={handleEdit}
                     />
                 )}
             </div>

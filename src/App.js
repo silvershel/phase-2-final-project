@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { Outlet } from "react-router-dom";
+import { Outlet, useNavigate } from "react-router-dom";
 import Header from "./components/Header";
 import NavBar from "./components/NavBar";
 import './index.css';
@@ -7,11 +7,14 @@ import './index.css';
 function App() {
     const [projects, setProjects] = useState([]);
     const [filteredProjects, setFilteredProjects] = useState([]);
+    const [edit, setEdit] = useState("false");
+    
+    const navigate = useNavigate();
 
     // FETCH request to display all projects.
     useEffect(() => {
-        fetch(`http://localhost:8000/projects`) 
-        // "?_limit=6" is used to load a maximum of 6 projects on the page.
+        fetch(`http://localhost:8000/projects/`) 
+        // Use "?_limit=#" to load a maximum of # projects on the page.
         .then((r) => r.json())
         .then((projectData) => {
             setProjects(projectData);
@@ -32,17 +35,31 @@ function App() {
         setFilteredProjects(updatedProjects);
     }
 
-    // Edit button click
-    function handleEdit() {
-
-    }
-
-    // Filter function for Search component.
+    // Search function for ProjectSearch component.
     function handleSearch(searchValue) {
         let searchedProjects =  projects.filter((project) => {
             return project.name.toLowerCase().includes(searchValue.toLowerCase());
         })
         setFilteredProjects(searchedProjects);
+    }
+
+    // Filter function for ProjectFilter component.
+    function handleFilter(selectedCategory) {
+        let filteredProjects =  projects.filter((project) => {
+            if (project.status === selectedCategory) {
+                return project;
+            } else if (selectedCategory === "all") {
+                return project;
+            }
+        })
+        setFilteredProjects(filteredProjects);
+    }
+
+     // Edit button click
+     function handleEdit() {
+        let projectToEdit = projects.filter((project) => {
+            navigate(`/project/${project.id}`)
+        })
     }
     
     return(
@@ -51,7 +68,7 @@ function App() {
             <header>
                 <NavBar />
             </header>
-            <Outlet context={{ filteredProjects, handleSearch, handleAddProject, handleDelete }} />
+            <Outlet context={{ filteredProjects, handleAddProject, handleDelete, handleSearch, handleFilter, handleEdit }} />
         </div>
     )
 }

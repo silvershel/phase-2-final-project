@@ -1,14 +1,16 @@
 import { useOutletContext } from "react-router-dom";
 import ProjectList from "./ProjectList";
-import Search from "./Search";
+import ProjectFilter from "./ProjectFilter";
+import ProjectSearch from "./ProjectSearch";
 
 function ProjectPage() {
-    const { filteredProjects, handleSearch, handleDelete } = useOutletContext();
+    const { filteredProjects, handleDelete, handleSearch, handleFilter, handleEdit } = useOutletContext();
     
     return(
         <div>
-            <Search handleSearch={handleSearch} />
-            <ProjectList projects={filteredProjects} handleDelete={handleDelete} />
+            <ProjectSearch handleSearch={handleSearch}/>
+            <ProjectFilter handleFilter={handleFilter} />
+            <ProjectList projects={filteredProjects} handleDelete={handleDelete} handleEdit={handleEdit} />
         </div>
     )
 }

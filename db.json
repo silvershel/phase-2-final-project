@@ -30,7 +30,15 @@
       "craft": "knitting",
       "name": "Sample Project Four",
       "pattern": "link to pattern",
-      "status": "started"
+      "status": "not started"
+    },
+    {
+      "id": "0a56",
+      "image": "https://t4.ftcdn.net/jpg/04/70/29/97/360_F_470299797_UD0eoVMMSUbHCcNJCdv2t8B2g1GVqYgs.jpg",
+      "craft": "knitting",
+      "name": "Sample Project 5",
+      "pattern": "url",
+      "status": "in progress"
     }
   ]
 }

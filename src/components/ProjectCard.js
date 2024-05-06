@@ -1,11 +1,4 @@
-import { useNavigate } from "react-router-dom";
-
-function ProjectCard({ project, handleDelete, id, image, name, pattern, craft, status }) {
-    const navigate = useNavigate();
-
-    function handleEditClick() {
-        navigate(`/project/${id}`);
-    }
+function ProjectCard({ project, handleDelete, handleEdit, id, image, name, pattern, craft, status }) {
 
     function handleDeleteClick() {
         fetch(`http://localhost:8000/projects/${id}`, {
@@ -14,8 +7,6 @@ function ProjectCard({ project, handleDelete, id, image, name, pattern, craft, s
         .then((r) => r.json())
         .then(() => handleDelete(project))
     }
-
-    // add "finished" status option (button?)
 
     return (
         <div className="card" >
@@ -27,7 +18,7 @@ function ProjectCard({ project, handleDelete, id, image, name, pattern, craft, s
                 <li>Status: {status}</li>
             </div>
             <div>
-                <button className="edit" onClick={handleEditClick}>Edit</button>
+                <button className="edit" onClick={handleEdit}>Edit</button>
                 <button className="delete" onClick={handleDeleteClick}>Delete</button>
             </div>
         </div>

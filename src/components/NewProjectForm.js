@@ -5,7 +5,7 @@ function NewProjectForm() {
     const [craft, setCraft] = useState("knitting");
     const [name, setName] = useState("");
     const [pattern, setPattern] = useState("");
-    const [status, setStatus] = useState("started");
+    const [status, setStatus] = useState("in progress");
     const {handleAddProject} = useOutletContext();
     const navigate = useNavigate();
 
@@ -37,16 +37,16 @@ function NewProjectForm() {
            <form onSubmit={handleAddProjectClick}>
                 <label>
                     Project Name:
-                    <input placeholder="Project Title" onChange={(e) => setName(e.target.value)}/>
+                    <input placeholder="Project Title" value={name} onChange={(e) => setName(e.target.value)}/>
                     Pattern:
-                    <input placeholder="Pattern url here" onChange={(e) => setPattern(e.target.value)} />
+                    <input placeholder="Pattern url here" value={pattern} onChange={(e) => setPattern(e.target.value)} />
                     Craft:
-                    <select onChange={(e) => setCraft(e.target.value)}>
+                    <select value={craft} onChange={(e) => setCraft(e.target.value)}>
                         <option value="knitting">Knitting</option>
                         <option value="crochet">Crochet</option>
                     </select>
                     Starting now?:
-                    <select onChange={(e) => setStatus(e.target.value)}>
+                    <select value={status} onChange={(e) => setStatus(e.target.value)}>
                         <option value="in progress">Yes</option>
                         <option value="not started">No</option>
                     </select>                    

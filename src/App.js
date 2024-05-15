@@ -7,7 +7,6 @@ import './index.css';
 function App() {
     const [projects, setProjects] = useState([]);
     const [filteredProjects, setFilteredProjects] = useState([]);
-    const [edit, setEdit] = useState("false");
     
     const navigate = useNavigate();
 
@@ -30,7 +29,7 @@ function App() {
 
     // DELETE request to delete a ProjectCare.
     function handleDelete(deletedProject) {
-        let updatedProjects = projects.filter((project) => project !== deletedProject)
+        let updatedProjects = projects.filter((project) => project.id !== deletedProject.id)
         setProjects(updatedProjects);
         setFilteredProjects(updatedProjects);
     }

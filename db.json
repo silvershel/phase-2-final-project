@@ -33,19 +33,19 @@
       "status": "not started"
     },
     {
-      "id": "0a56",
-      "image": "https://t4.ftcdn.net/jpg/04/70/29/97/360_F_470299797_UD0eoVMMSUbHCcNJCdv2t8B2g1GVqYgs.jpg",
+      "id": "a20a",
+      "image": "https://d2tk9av7ph0ga6.cloudfront.net/image/catalog/2022/5/bubblegum-kinoko-2-1-700xauto.jpg",
       "craft": "knitting",
-      "name": "Sample Project 5",
-      "pattern": "url",
+      "name": "Marled Sweater",
+      "pattern": "",
       "status": "in progress"
     },
     {
-      "id": "db04",
-      "image": "https://media.gq.com/photos/65d907d619c840b1c3f654a6/16:9/w_2240,c_limit/sweaters.jpg",
+      "id": "98d6",
+      "image": "https://d2tk9av7ph0ga6.cloudfront.net/image/catalog/2022/5/bubblegum-kinoko-2-1-700xauto.jpg",
       "craft": "knitting",
-      "name": "",
-      "pattern": "",
+      "name": "https://d2tk9av7ph0ga6.cloudfront.net/image/catalog/2022/5/bubblegum-kinoko-2-1-700xauto.jpg",
+      "pattern": "https://d2tk9av7ph0ga6.cloudfront.net/image/catalog/2022/5/bubblegum-kinoko-2-1-700xauto.jpg",
       "status": "in progress"
     }
   ]

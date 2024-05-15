@@ -39,6 +39,8 @@ function NewProjectForm() {
                 <label>
                     Project Name:
                     <input type="text" placeholder="Project Title" value={name} onChange={(e) => setName(e.target.value)}/>
+                    Project Image:
+                    <input type="text" placeholder="Image url here" value={image} src={image} onChange={(e) => setImage(e.target.value)}/>
                     Pattern:
                     <input type="text" placeholder="Pattern url here" value={pattern} onChange={(e) => setPattern(e.target.value)} />
                     Craft:
@@ -50,9 +52,7 @@ function NewProjectForm() {
                     <select value={status} onChange={(e) => setStatus(e.target.value)}>
                         <option value="in progress">Yes</option>
                         <option value="not started">No</option>
-                    </select> 
-                    Upload An Image:
-                    <input type="text" placeholder="Project Image" value={image} src={image} onChange={(e) => setImage(e.target.value)}/>                   
+                    </select>                    
                 </label>            
                 <button className="submit" >Submit</button >
            </form>

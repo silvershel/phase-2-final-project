@@ -1,12 +1,14 @@
-function ProjectCard({ project, handleDelete, handleEdit, id, image, name, pattern, craft, status }) {
+function ProjectCard({ handleDelete, handleEdit, id, image, name, pattern, craft, status }) {
 
     function handleDeleteClick() {
         fetch(`http://localhost:8000/projects/${id}`, {
             method: "DELETE"
         })
         .then((r) => r.json())
-        .then(() => handleDelete(project))
+        .then((project) => handleDelete(project))
     }
+
+    // separate component use outletcontext to render card details
 
     return (
         <div className="card" >
